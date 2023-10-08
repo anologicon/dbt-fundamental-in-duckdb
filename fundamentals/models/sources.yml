@@ -1,0 +1,21 @@
+sources:
+  - name: jaffle
+    meta:
+      external_location: '/home/anolgicon/Documentos/Projects/dbt-fundamentals/{name}.csv'
+    tables:
+      - name: jaffle_shop_customers
+        columns:
+          - name: ID
+            tests:
+              - unique
+              - not_null
+      - name: jaffle_shop_orders
+        columns:
+          - name: ID
+            tests:
+              - unique
+              - not_null
+      - name: stripe_payments
+        # loaded_at_field: CREATED (must be a timestamp)
+        # freshness:
+        #   warn_after: {count: 1, period: day}
