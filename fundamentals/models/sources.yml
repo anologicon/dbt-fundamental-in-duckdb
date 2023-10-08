@@ -1,7 +1,7 @@
 sources:
   - name: jaffle
     meta:
-      external_location: '/home/anolgicon/Documentos/Projects/dbt-fundamentals/{name}.csv'
+      external_location: '../../dbt-fundamentals/{name}.csv'
     tables:
       - name: jaffle_shop_customers
         columns:
